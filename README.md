@@ -52,14 +52,17 @@ Analytics Data Platform (PostgreSQL + ES + Redis)
 
 ```
 agnetic-hospital/
-├── agent_framework/     # Agent Base Class, Event Bus, Orchestrator
-├── agents/              # 6개 전담 Agent
+├── agent_framework/     # Agent Base Class, Event Bus, RPC, Orchestrator
+├── agents/              # 6개 전담 Agent (Patient Flow, Resource, Clinical, Financial, Supply Chain, Research)
 ├── models/              # 모델 저장소
 ├── shared/              # Feature Store, FHIR 변환기, CDC 파이프라인
 ├── api/                 # API Gateway
 ├── frontend/            # 통합 대시보드
-├── docs/                # 설계 문서
-└── plans/               # 20개 프로젝트 상세 구현 계획
+├── docs/
+│   ├── agent-architecture.md   # 🆕 6개 Agent 역할·협업·충돌해결 상세
+│   ├── multi-agent-system.md   # CDC + FHIR 기반 시스템 설계
+│   └── research-cases.md       # 국내외 사례 100+ URLs
+└── requirements.txt
 ```
 
 ## 🔗 링크
